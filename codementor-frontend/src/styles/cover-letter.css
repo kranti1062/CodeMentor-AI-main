@@ -1,0 +1,309 @@
+.cover-letter-page {
+    min-height: 100vh;
+    padding: 30px;
+    background: #f5f7fb;
+}
+
+
+/* HEADER */
+
+.cover-letter-header {
+    max-width: 1450px;
+    margin: 0 auto 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.cover-letter-title-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cover-letter-title-row h2 {
+    margin: 0 0 5px !important;
+}
+
+.cover-letter-main-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #1677ff;
+    color: white;
+
+    font-size: 25px;
+}
+
+
+/* WORKSPACE */
+
+.cover-letter-workspace {
+    max-width: 1450px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* EDITOR */
+
+.cover-letter-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cover-card {
+    border-radius: 14px !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.cover-input {
+    margin-bottom: 14px;
+}
+
+.ant-input,
+.ant-input-affix-wrapper {
+    border-radius: 8px;
+}
+
+
+/* BUTTONS */
+
+.cover-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.cover-actions .ant-btn-primary {
+    min-width: 220px;
+}
+
+
+/* PREVIEW */
+
+.cover-letter-preview-area {
+    position: sticky;
+    top: 20px;
+}
+
+.preview-topbar {
+    background: white;
+
+    padding: 14px 18px;
+
+    border-radius: 12px 12px 0 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.cover-letter-paper {
+    background: white;
+
+    width: 100%;
+    min-height: 850px;
+
+    padding: 55px;
+
+    box-shadow:
+        0 8px 35px rgba(0, 0, 0, 0.08);
+
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* LETTER */
+
+.letter-header {
+    text-align: center;
+}
+
+.letter-header h1 {
+    margin: 0 0 12px;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.contact-line {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 6px;
+
+    font-size: 13px;
+    color: #555;
+}
+
+.contact-line span:not(:last-child)::after {
+    content: " •";
+    margin-left: 10px;
+}
+
+.letter-date {
+    margin-bottom: 25px;
+
+    font-size: 14px;
+    color: #555;
+}
+
+.letter-subject {
+    font-weight: 600;
+    margin: 25px 0;
+}
+
+.letter-content {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #222;
+}
+
+.letter-content p {
+    margin-bottom: 18px;
+}
+
+.generated-letter p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* EMPTY STATE */
+
+.empty-preview {
+    min-height: 700px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: #999;
+}
+
+.empty-preview .anticon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #1677ff;
+}
+
+.empty-preview h2 {
+    color: #333;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    .cover-letter-workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .cover-letter-preview-area {
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .cover-letter-page {
+        padding: 15px;
+    }
+
+    .cover-letter-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cover-letter-paper {
+        padding: 30px 22px;
+    }
+
+    .cover-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cover-actions button {
+        width: 100%;
+    }
+
+}
+
+
+/* PRINT */
+
+@media print {
+
+    body {
+        background: white !important;
+    }
+
+    .cover-letter-page {
+        padding: 0;
+        background: white;
+    }
+
+    .cover-letter-header,
+    .cover-letter-editor,
+    .preview-topbar {
+        display: none !important;
+    }
+
+    .cover-letter-workspace {
+        display: block;
+        margin: 0;
+    }
+
+    .cover-letter-preview-area {
+        position: static;
+    }
+
+    .cover-letter-paper {
+        box-shadow: none;
+        border-radius: 0;
+
+        width: 100%;
+        min-height: auto;
+
+        padding: 45px;
+    }
+}

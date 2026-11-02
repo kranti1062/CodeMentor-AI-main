@@ -1,0 +1,405 @@
+/* =========================================
+   RESUME MAKER
+========================================= */
+
+.resume-maker {
+    min-height: 100vh;
+    padding: 40px;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(99, 102, 241, 0.12),
+            transparent 35%
+        ),
+        hwb(210 95% 4% / 0.945);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.resume-maker-header {
+    max-width: 1500px;
+    margin: 0 auto 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.resume-maker-header h2 {
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.resume-maker-header p {
+    max-width: 750px;
+}
+
+/* =========================================
+   WORKSPACE
+========================================= */
+
+.resume-workspace {
+    max-width: 1500px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 700px;
+
+    gap: 30px;
+    align-items: start;
+}
+
+.resume-editor {
+    min-width: 0;
+}
+
+.builder-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.resume-section-card {
+    margin-top: 20px;
+}
+
+/* =========================================
+   FORMS
+========================================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.form-grid > * {
+    width: 100%;
+}
+
+.dynamic-item {
+    padding: 20px;
+    margin-bottom: 20px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    background: #fafafa;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* =========================================
+   AI BUTTON
+========================================= */
+
+.ai-action {
+    margin-top: 15px;
+}
+
+/* =========================================
+   PREVIEW
+========================================= */
+
+.resume-preview-wrapper {
+    position: sticky;
+    top: 20px;
+}
+
+.preview-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.resume-paper {
+    width: 100%;
+    min-height: 990px;
+
+    padding: 55px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.12);
+
+    color: #1f2937;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+.resume-name {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+
+    color: #111827;
+}
+
+.resume-role {
+    text-align: center;
+
+    margin-top: 5px;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #4f46e5;
+}
+
+.resume-contact {
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    font-size: 12px;
+}
+
+.resume-links {
+    margin-top: 7px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+
+    font-size: 11px;
+
+    color: #4f46e5;
+}
+
+/* =========================================
+   RESUME SECTIONS
+========================================= */
+
+.resume-preview-section {
+    margin-top: 28px;
+}
+
+.resume-preview-section h3 {
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    border-bottom: 2px solid #111827;
+
+    padding-bottom: 5px;
+
+    margin-bottom: 10px;
+
+    color: #111827;
+}
+
+.resume-preview-section p {
+    margin: 5px 0;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    white-space: pre-line;
+}
+
+.resume-entry {
+    margin-bottom: 18px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.entry-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.entry-header strong {
+    font-size: 13px;
+}
+
+.company-name {
+    font-style: italic;
+
+    margin-top: 2px;
+}
+
+.resume-entry em {
+    font-size: 11px;
+
+    color: #4b5563;
+}
+
+/* =========================================
+   ATS
+========================================= */
+
+.ats-panel {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.ats-score {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 50px;
+
+    padding: 30px;
+}
+
+.ats-check {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ats-check span {
+    flex: 1;
+}
+
+.check-success {
+    color: #16a34a;
+
+    font-size: 20px;
+}
+
+.check-pending {
+    color: #f59e0b;
+
+    font-size: 20px;
+}
+
+/* =========================================
+   JOB MATCHER
+========================================= */
+
+.matcher-panel {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.keyword-section {
+    margin-top: 25px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .resume-workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-preview-wrapper {
+        position: static;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .resume-maker {
+        padding: 20px;
+    }
+
+    .resume-maker-header {
+        flex-direction: column;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ats-score {
+        flex-direction: column;
+    }
+
+    .resume-paper {
+        padding: 30px;
+
+        min-height: auto;
+    }
+
+}
+
+/* =========================================
+   PRINT / PDF
+========================================= */
+
+@media print {
+
+    body {
+        background: white !important;
+    }
+
+    .resume-maker {
+        padding: 0;
+
+        background: white;
+    }
+
+    .resume-maker-header,
+    .resume-editor,
+    .preview-title {
+        display: none !important;
+    }
+
+    .resume-workspace {
+        display: block;
+
+        margin: 0;
+
+        width: 100%;
+    }
+
+    .resume-preview-wrapper {
+        position: static;
+    }
+
+    .resume-paper {
+        box-shadow: none;
+
+        width: 100%;
+
+        min-height: auto;
+
+        margin: 0;
+
+        padding: 40px;
+    }
+}
